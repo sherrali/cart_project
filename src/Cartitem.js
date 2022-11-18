@@ -11,8 +11,19 @@ class Cartitem extends React.Component{
         }
     }
     increaseQuantity= () =>{
-        console.log( 'this' ,this.state )
+        // console.log( 'this' ,this.state )
         // this.setState(this.state)
+        // setstate first form 
+        // this.setState({
+        //     qty : this.state.qty +1
+        // })
+
+        // setState second form
+        this.setState((prevState) =>{
+            return{
+                qty : prevState.qty + 1
+            }
+        })
     }
     render(){
         const{price , title , qty} = this.state;
@@ -23,8 +34,8 @@ class Cartitem extends React.Component{
                 </div>
                 <div className="right-block">
                     <div style={ {fontSize : 25}}>{title}</div>
-                    <div style={ {color : '#777'}}>Rs -{price}</div>
-                    <div style={ {color : '#777'}}>qty -{qty}</div>
+                    <div style={ {color : '#777'}}>Rs : {price}</div>
+                    <div style={ {color : '#777'}}>qty : {qty}</div>
                     <div className="cart-item-actions">
                         {/* Buttons*/}
                         <img

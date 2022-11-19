@@ -1,11 +1,11 @@
 import React from "react";
-import Cartitem from "./Cartitem";
+// import Cartitem from "./Cartitem";
+import Cart from './Cart'
 
 function App() {
   return (
     <div className="App">
-      <h1>Cart Project</h1>
-      <Cartitem/>
+      <Cart/>
     </div>
   );
 }
